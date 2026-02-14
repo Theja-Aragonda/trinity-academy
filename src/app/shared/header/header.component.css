@@ -1,0 +1,102 @@
+.header {
+  position: sticky;   
+  top: 0;
+  z-index: 1000;
+    background-color: #e6fff2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 50px;
+    border-radius: 0 0 22px 22px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    height: 90px; 
+  }
+  
+  /* Logo section */
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .logo {
+    width: 240px;      /* increase width */
+    height: 100px;      /* keeps image sharp */
+    object-fit: contain;
+    mix-blend-mode: multiply;
+  }
+  
+  /* Brand text */
+  .brand-text h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #3b3bbf;
+    letter-spacing: 1px;
+  }
+  
+  .brand-text span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ff5fa2;
+    letter-spacing: 1px;
+  }
+  
+  /* Navigation */
+  .nav-links {
+    display: flex;
+    gap: 28px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    position: relative;
+  }
+  
+  .nav-links a:hover {
+    color: #3b3bbf;
+  }
+  
+  /* Active link */
+  .nav-links a.active {
+    color: #3b3bbf;
+  }
+  
+  .nav-links a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #3b3bbf;
+    left: 0;
+    bottom: -6px;
+    border-radius: 3px;
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .header {
+      flex-direction: column;
+      gap: 14px;
+      padding: 20px;
+      position: sticky;
+    top: 0;
+    z-index: 1000;
+    }
+    .logo {
+      width: 180px;
+    }
+  
+    .nav-links {
+      gap: 18px;
+    }
+  
+    .brand-text h1 {
+      font-size: 24px;
+    }
+  }
+  
+  
